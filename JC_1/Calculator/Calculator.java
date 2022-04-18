@@ -10,6 +10,7 @@ public class Calculator {
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply = (x, y) -> x * y;
     // по дефолту не инициализированная переменная будет равна 0. Деление на 0 невозможно.
+    // Нужно сделать проверку на 0,чтобы избежать ошибке при y=0
     BinaryOperator<Integer> divide = (x, y) -> y == 0 ? 0 : x / y;
 
     UnaryOperator<Integer> pow = x -> x * x;
