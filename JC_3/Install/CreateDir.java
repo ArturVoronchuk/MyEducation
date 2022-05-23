@@ -1,8 +1,6 @@
 package JC_3.Install;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CreateDir {
 
