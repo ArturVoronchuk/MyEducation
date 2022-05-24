@@ -1,7 +1,7 @@
-package JC_3.Install;
+package JC_3;
 
 import java.io.*;
-import static JC_3.Install.StringB.logsSaved;
+import static JC_3.StringB.logsSaved;
 
 public class WriteFile {
 

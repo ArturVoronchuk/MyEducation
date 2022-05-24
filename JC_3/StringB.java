@@ -1,4 +1,4 @@
-package JC_3.Install;
+package JC_3;
 
 public class StringB {
 
