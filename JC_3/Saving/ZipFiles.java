@@ -10,10 +10,10 @@ public class ZipFiles {
     public static void zipFiles(String path, String files) throws IOException {
 
         try (
-                ZipOutputStream zos = new ZipOutputStream(new FileOutputStream("D:/Games/savegames/zip.zip"));
-                FileInputStream fis = new FileInputStream("D:/Games/savegames/save1.dat");
+                ZipOutputStream zos = new ZipOutputStream(new FileOutputStream("C:/Games/savegames/zip.zip"));
+                FileInputStream fis = new FileInputStream("C:/Games/savegames/save1.dat");
         ) {
-            ZipEntry entry = new ZipEntry("zip_save1.dat");
+            ZipEntry entry = new ZipEntry("save1.dat");
             zos.putNextEntry(entry);
             byte[] buffer = new byte[fis.available()];
             fis.read(buffer);

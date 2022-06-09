@@ -6,18 +6,44 @@ public class CreateDir {
 
     public static void createDir() {
 
-        File dirGames = new File("D:/Games");
-        File dirSrc = new File("D:/Games/src/main");
-        File dirSrcMain = new File("D:/Games/src/temp");
-        File dirRes = new File("D:/Games/res");
-        File dirSaveGames = new File("D:/Games/savegames");
-        File dirTemp = new File("D:/Games/temp");
-        File drawables = new File("D:/Games/res/drawables");
-        File vectors = new File("D:/Games/res/vectors");
-        File icons = new File("D:/Games/icons");
+        File dir = null;
 
-        if (!dirGames.exists()) {
-            dirGames.mkdir();
+        String[] str = new String[]{
+                "C:/Games",
+                "C:/Games/src/main",
+                "C:/Games/src/temp",
+                "C:/Games/res",
+                "C:/Games/savegames",
+                "C:/Games/temp",
+                "C:/Games/res/drawables",
+                "C:/Games/res/vectors",
+                "C:/Games/icons"
+        };
+
+        try {
+            for (String s : str) {
+                dir = new File(s);
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                } else {
+                    System.out.println("Папка " + dir.getName() + " уже сущаетсвет.");
+                }
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+/*        File dirGames = new File("C:/Games");
+        File dirSrc = new File("C:/Games/src/main");
+        File dirSrcMain = new File("C:/Games/src/temp");
+        File dirRes = new File("C:/Games/res");
+        File dirSaveGames = new File("C:/Games/savegames");
+        File dirTemp = new File("C:/Games/temp");
+        File drawables = new File("C:/Games/res/drawables");
+        File vectors = new File("C:/Games/res/vectors");
+        File icons = new File("C:/Games/icons");*/
+
+/*        if (!dir.exists()) {
+            dir.mkdirs();
             dirSrc.mkdirs();
             dirSrcMain.mkdirs();
             dirRes.mkdir();
@@ -25,12 +51,7 @@ public class CreateDir {
             dirTemp.mkdir();
             drawables.mkdirs();
             vectors.mkdirs();
-            icons.mkdirs();
-            System.out.println("Все папки успешно созданы.");
-        } else if (dirGames.exists()) {
-            System.out.println("Папка " + dirGames.getName() + " уже сущаетсвет.");
-        } else {
-            System.out.println("Папка " + dirGames.getName() + " не может быть создана.");
-        }
+            icons.mkdirs();*/
+
     }
 }
