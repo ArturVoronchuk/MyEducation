@@ -1,4 +1,4 @@
-package JC_3.Saving;
+package JC_3;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
